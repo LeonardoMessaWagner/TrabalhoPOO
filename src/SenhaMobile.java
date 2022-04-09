@@ -1,17 +1,19 @@
-public class SenhaMobile extends Pessoa{
+public class SenhaMobile extends Senha{
     String app;
-    public SenhaMobile(String nome, String email, String cPF, String login, String senha, Pessoa.Nivel nivel,
-            String app) {
-        super(nome, email, cpf, login, senha, nivel);
-        this.app = app;
-    }
-    public void aplicar() {
+    public void aplicar(){
         
     }
+    public SenhaMobile(String descricao, String login, String senha, String app) {
+        super(descricao, login, senha);
+        this.app = app;
+    }
+
     public String getApp() {
         return app;
     }
+
     public void setApp(String app) {
         this.app = app;
     }
+    
 }
