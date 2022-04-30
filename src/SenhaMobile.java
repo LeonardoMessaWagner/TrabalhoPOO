@@ -1,19 +1,19 @@
 public class SenhaMobile extends Senha{
-    String app;
-    public void aplicar(){
-        
-    }
+    protected String app;
+
+    // Construtor SenhaMobile
     public SenhaMobile(String descricao, String login, String senha, String app) {
         super(descricao, login, senha);
         this.app = app;
     }
 
-    public String getApp() {
-        return app;
+    // Override do método aplicar
+    public void aplicar() {
+        System.out.printf("Login: %s\nSenha: %s\n  Resultado: Ok\n  Local: %s", this.login, this.senha, this.app);
     }
 
-    public void setApp(String app) {
-        this.app = app;
-    }
+    // App get/set
+    public String getApp() { return app; }
+    public void setApp(String app) { this.app = app; }
     
 }

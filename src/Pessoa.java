@@ -1,78 +1,48 @@
 public class Pessoa {
+    // Enumeração da variavel Nivel
     public enum Nivel {
         Usuario, Administrador, Dono;
     }
 
-    public static final String Pessoa = null;
-
     String nome;
     String email;
-    private final  String cpf;
+    private String CPF;
     private String login;
     private String senha;
     Nivel nivel;
+    Boolean logado;
 
-    public void Entrar() {
-
-    }
-
-    public void Sair() {
-
-    }
-
-    public Pessoa(String nome, String email, String cpf, String login, String senha, Nivel nivel) {
+    // Construtor Pessoa
+    public Pessoa(String nome, String email, String CPF, String login, String senha, Nivel nivel) {
         this.nome = nome;
         this.email = email;
-        this.cpf = cpf;
+        this.CPF = CPF;
         this.login = login;
         this.senha = senha;
         this.nivel = nivel;
     }
 
-    public String getNome() {
-        return nome;
-    }
+    // Nome get/set
+    public String getNome() { return nome; }
+    public void setNome(String nome) { this.nome = nome; }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+    // Email get/set
+    public String getEmail() { return email; }
+    public void setEmail(String email) { this.email = email; }
 
-    public String getEmail() {
-        return email;
-    }
+    // CPF get/set
+    public String getCPF() { return CPF; }
+    public void setCPF(String CPF) { this.CPF = CPF; }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+    // Login get/set
+    public String getLogin() { return login; }
+    public void setLogin(String login) { this.login = login; }
 
-    public String getCpf() {
-        return cpf;
-    }
+    // Senha get/set
+    public String getSenha() { return senha; }
+    public void setSenha(String senha) { this.senha = senha; }
 
-    
-
-    public String getLogin() {
-        return login;
-    }
-
-    public void setLogin(String login) {
-        this.login = login;
-    }
-
-    public String getSenha() {
-        return senha;
-    }
-
-    public void setSenha(String senha) {
-        this.senha = senha;
-    }
-
-    public Nivel getNivel() {
-        return nivel;
-    }
-
-    public void setNivel(Nivel nivel) {
-        this.nivel = nivel;
-    }
-
+    // Nivel get/set
+    public Nivel getNivel() { return nivel; }
+    public void setNivel(Nivel nivel) { this.nivel = nivel; }
 }
