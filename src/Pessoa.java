@@ -1,19 +1,25 @@
+import java.util.ArrayList;
+
 public class Pessoa {
     // Enumeração da variavel Nivel
-    public enum Nivel {
-        Usuario, Administrador, Dono;
+    public enum Nivel 
+    {
+        Usuario, Administrador;
     }
 
-    String nome;
-    String email;
+    private ArrayList<SenhaWeb> SenhasWeb = new ArrayList<SenhaWeb>();
+    private ArrayList<SenhaMobile> SenhasMobile = new ArrayList<SenhaMobile>();
+
+    private String nome;
+    private String email;
     private String CPF;
     private String login;
     private String senha;
-    Nivel nivel;
-    Boolean logado;
+    private Nivel nivel;
 
     // Construtor Pessoa
-    public Pessoa(String nome, String email, String CPF, String login, String senha, Nivel nivel) {
+    public Pessoa(String nome, String email, String CPF, String login, String senha, Nivel nivel) 
+    {
         this.nome = nome;
         this.email = email;
         this.CPF = CPF;
@@ -45,4 +51,28 @@ public class Pessoa {
     // Nivel get/set
     public Nivel getNivel() { return nivel; }
     public void setNivel(Nivel nivel) { this.nivel = nivel; }
+
+    // Cadastrar Senha Web
+    public void CadastrarSenhaWeb(SenhaWeb senhaWeb)
+    {
+        SenhasWeb.add(senhaWeb);
+    }
+
+    // SenhasWeb get
+    public ArrayList<SenhaWeb> getSenhasWeb()
+    {
+        return SenhasWeb;
+    }
+
+    // Cadastrar Senha Mobile
+    public void CadastrarSenhaMobile(SenhaMobile senhaMobile)
+    {
+        SenhasMobile.add(senhaMobile);
+    }
+
+    // SenhasMobile get
+    public ArrayList<SenhaMobile> getSenhasMobile()
+    {
+        return SenhasMobile;
+    }
 }
