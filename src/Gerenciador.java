@@ -11,7 +11,7 @@ public class Gerenciador {
     {
         for (Pessoa pessoa : Pessoas)
         {
-            if (pessoa.getLogin() == login && pessoa.getSenha() == senha)  
+            if (pessoa.getLogin().equals(login) && pessoa.getSenha().equals(senha))  
             {
                 this.PessoaLogada = pessoa;
                 return 0;
@@ -33,16 +33,21 @@ public class Gerenciador {
 
     public Pessoa GetPessoaLogada()
     {
-        return PessoaLogada;
+        return this.PessoaLogada;
     }
 
     public Boolean IsLogado()
     {
-        return PessoaLogada != null;
+        return this.PessoaLogada != null;
     }
     
     public Boolean IsAdministrador()
     {
-        return PessoaLogada.getNivel() == Pessoa.Nivel.Administrador;
+        return this.PessoaLogada.getNivel() == Pessoa.Nivel.Administrador;
+    }
+
+    public ArrayList<Pessoa> GetPessoas()
+    {
+        return this.Pessoas;
     }
 }

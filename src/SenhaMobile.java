@@ -9,7 +9,7 @@ public class SenhaMobile extends Senha{
 
     // Override do método aplicar
     public void aplicar() {
-        System.out.printf("Login: %s\nSenha: %s\n  Resultado: Ok\n  Local: %s", this.login, this.senha, this.app);
+        System.out.printf("Login: %s\nSenha: %s\n  Resultado: Ok\n  Local: %s\n", this.login, this.senha, this.app);
     }
 
     // App get/set

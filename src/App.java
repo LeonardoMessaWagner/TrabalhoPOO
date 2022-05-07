@@ -2,6 +2,8 @@ public class App {
     public static void main(String[] args) throws Exception 
     {
         Interface Tela = new Interface();
-        Tela.MostrarAções();
+        while (true) {
+            Tela.MostrarAções();
+        }
     }
 }

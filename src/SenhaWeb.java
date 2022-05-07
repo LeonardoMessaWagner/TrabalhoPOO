@@ -9,7 +9,7 @@ public class SenhaWeb extends Senha {
 
     // Override to método aplicar
     public void aplicar(){
-        System.out.printf("Login: %s\nSenha: %s\n  Resultado: Ok\n  Local: %s", this.login, this.senha, this.site);
+        System.out.printf("Login: %s\nSenha: %s\n  Resultado: Ok\n  Local: %s\n", this.login, this.senha, this.site);
     }
     
     // Site get/set
