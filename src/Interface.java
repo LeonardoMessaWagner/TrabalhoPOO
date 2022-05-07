@@ -14,7 +14,7 @@ public class Interface {
                 System.out.print("2 - Cadastrar Administrador\n");
                 
                 Integer Decisao = Integer.parseInt(Entrada.nextLine());
-                decisao: switch (Decisao)
+                switch (Decisao)
                 {
                     case 1:
                     {
